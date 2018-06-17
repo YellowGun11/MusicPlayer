@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Listen To Me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: #2c2c2c">
+<header>
+    <div class="logo">听    我</div>
+    <div class="logo-title">Listen To Me</div>
+    <div class="login-icon">
+        <img src="img/loginIcon.png">
+    </div>
+    <div class="search-box">
+        <input type="text" class="search-text">
+        <img class="search-icon" src="img/searchIcon.png">
+    </div>
+</header>
+<!--页面顶端header结束-->
+
+<audio id="music" src="music/晴天.mp3" preload>
+    对不起，您的浏览器不支持HTML5音频播放器
+</audio>
+
+<div class="main-content">
+    <div class="content-left">
+        <div class="songName">
+            <marquee><span  id="song-title"  style="color: #f4ea24;font-size: 24px;">晴天</span></marquee>
+        </div>
+        <div class="previousBtn" onclick="lastMusic()">
+            <img src="img/previousIcon.png">
+        </div>
+        <!--上一首键previousBtn结束-->
+        <div class="toggleBtn">
+            <div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div id="toggle" onclick="toggleMusic()">
+                <img src="img/playIcon.png">
+            </div>
+        </div>
+        <!--播放暂停键toggleBtn结束-->
+        <div class="nextBtn" onclick="nextMusic()">
+            <img src="img/nextIcon.png">
+        </div>
+        <!--下一首键nextBtn结束-->
+    </div>
+    <!--播放主界面左content-left结束-->
+
+    <div class="content-right">
+        <div class="shareBtn">
+            <img src="img/shareIcon.png" width="40" height="40">
+        </div>
+        <!--分享按钮shareBtn结束-->
+        <div class="collectBtn">
+            <img src="img/collectIcon.png" width="40" height="40">
+        </div>
+        <!--收藏按钮collectBtn结束-->
+        <div class="playWayBtn">
+            <img src="img/listPlayIcon.png" width="40" height="40">
+        </div>
+        <!--播放模式playWayBtn结束-->
+        <div class="volumeSet">
+            <div class="range">
+                <input  id="volume" type="range" min="0" max="1" step="0.1"  onchange="setVolume()">
+            </div>
+            <div class="volumeToggle">
+                <img src="img/volumeIcon.png" width="40" height="40">
+            </div>
+        </div>
+        <!--音量设置volumeSet结束-->
+    </div>
+    <!--主界面右部按钮区content-right结束-->
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
+
